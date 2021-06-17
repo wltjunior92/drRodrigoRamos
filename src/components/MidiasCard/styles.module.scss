@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+  min-width: 20rem;
+  height: 27rem;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  >img {
+    height: 100%;
+
+    transition: height 0.3s;
+  }
+
+  button {
+    position: absolute;
+    border: 0;
+    width: 19rem;
+    height: 27rem;
+
+    z-index: 5;
+
+    background-color: transparent;
+  }
+
+  &:hover {
+    >img {
+      height: 105%;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  z-index: 4;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  padding: 1rem;
+  z-index: 10;
+
+  color: var(--background);
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: 'El Messiri';
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+
+    max-height: 5.5rem;
+  }
+}

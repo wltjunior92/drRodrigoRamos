@@ -1,0 +1,169 @@
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+
+  background-size: cover;
+  background-position-y: -5rem;
+
+  section {
+    position: relative;
+    max-width: 1290px;
+    margin: 0 auto;
+
+    h1 {
+      position: absolute;
+      color: var(--black);
+      font-size: 5rem;
+      font-weight: 700;
+
+      top: 56px;
+    }
+
+    h5 {
+      position: absolute;
+      color: var(--drawer-bg);
+      font-size: 1.8rem;
+      top: 150px;
+    }
+
+    @media (max-width: 720px) {
+      h1 {
+        font-size: 2.8rem;
+        top: 25px;
+      }
+
+      h5 {
+        font-size: 0.85rem;
+        top: 70px;
+      }
+    }
+  }
+
+
+  @media (max-width: 801px) {
+    height: 25rem;
+    background-position-y: 0;
+  }
+
+  @media (max-width: 720px) {
+    height: 10rem;
+    background-position-y: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: linear-gradient(to right , rgba(220, 220, 255, 0.96),rgba(200, 200, 255, 0.9), rgba(0, 0, 0, 0));
+
+    width: 80%;
+    height: 100%;
+  }
+}
+
+.profissionalContent {
+  max-width: 1190px;
+  margin: 0 auto;
+
+  padding: 2rem 0;
+
+  h1, h3 {
+    color: var(--background);
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @media (max-width: 720px) {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 1025px) {
+    max-width: 97vw;
+  }
+}
+
+.content {
+  display: flex;
+
+  & + .content {
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 8rem;
+
+    @media (max-width: 801px) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  p {
+    text-align: justify;
+    font-family: "El Messiri";
+    font-weight: 100;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    
+    @media (max-width: 801px) {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  img {
+    width: 350px;
+    border-radius: 8px;
+
+    @media (max-width: 321px) {
+      width: 300px;
+    }
+  }
+
+  a {
+    color: var(--blue);
+
+    &:hover {
+      filter: brightness(0.8)
+    }
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+
+    align-items: center;
+  }
+}
+
+.contentRight {
+  img {
+    margin-right: 2rem;
+
+    @media (max-width: 720px) {
+      margin: 0;
+    }
+  }
+}
+
+.contentLeft {
+  flex-direction: row-reverse;
+
+  img {
+    margin-left: 2rem;
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+    img {
+      margin: 0;
+    }
+  }
+}

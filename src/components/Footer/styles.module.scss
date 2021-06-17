@@ -1,0 +1,142 @@
+.container {
+  position: relative;
+
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  >img {
+    margin-bottom: 3rem;
+
+    @media(max-width: 1025px) {
+      width: 90vw;
+      height: 1px;
+      margin-bottom: 1rem;
+    }
+
+    @media(max-width: 801px) {
+      width: 90vw;
+      height: 1px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  footer {
+    margin: 1rem 0;
+
+    color: var(--background);
+
+    a {
+      font-weight: 600;
+
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--light-grey);
+      }
+    }
+  }
+
+  @media(max-width: 720px) {
+    background-position-y: 0px;
+  }
+}
+
+.content {
+  text-align: center;
+  display: flex;
+
+  img {
+    height: 5rem;
+
+    @media(max-width: 1025px) {
+      height: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  div {
+    margin-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    nav {
+      font-weight: 100;
+      color:var(--white);
+      margin-bottom: 1.2rem;
+  
+      a + a {
+        margin-left: 1rem;
+      }
+  
+      a:hover {
+        font-weight: 400;
+      }
+  
+      @media(max-width: 801px) {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+
+        a {
+          padding: 0.25rem 0;
+        }
+
+        a + a {
+          margin-left: 0;
+        }
+      }
+    }
+  
+    main {
+      align-self: flex-end;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        margin: 0 0.5rem;
+        color: var(--background);
+  
+        transition: color 0.2s;
+  
+        &:hover {
+          color: var(--light-grey);
+        }
+  
+        @media(max-width: 801px) {
+          width: 45px;
+          height: 45px;
+    
+          &:active {
+            color: var(--light-grey);
+          }
+        }
+        
+        @media(max-width: 320px) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      @media(max-width: 801px) {
+        align-self: flex-start;
+      }
+    }
+
+    @media(max-width: 801px) {
+      margin-left: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @media(max-width: 801px) {
+    width: 80vw;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,113 @@
+.container {
+  margin: 2rem 0;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3rem 0;
+
+  >div {
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 6rem;
+      top: -3.75rem;
+      width: 4rem;
+    }
+    h1 {
+      color: var(--white);
+      font-size: 2.8rem;
+      font-weight: 600;
+  
+      border-bottom: 1px solid var(--golden);
+      padding-right: 3rem;
+      padding-left: 15rem;
+      margin-left: 20rem;
+  
+      margin-bottom: 3rem;
+    }
+
+    @media(max-width: 720px) {
+      h1 {
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  
+  &::before {
+    content: '';
+
+    position: absolute;
+    z-index: -5;
+
+    width: 100vw;
+    height: 823px;
+
+    background-image: url('/images/moldura.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    top: -80px;
+    left: 0;
+
+    @media(max-width: 720px) {
+      background-image: url('/images/moldura_mobile.png');
+      background-size: 500px 200vw;
+      top: -80px;
+    }
+
+  }
+}
+
+.content {
+  max-width: 1290px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4px;
+
+  @media(max-width: 720px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+.content_mobile {
+  @media(max-width: 1025px) {
+    max-width: 95%;
+    display: flex;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+      width: 5px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgb(119, 119, 119);
+    }
+  }
+  
+  @media(max-width: 801px) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

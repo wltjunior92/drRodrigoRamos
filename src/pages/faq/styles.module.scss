@@ -1,0 +1,161 @@
+.headerContent {
+  width: 100vw;
+  height: 200px;
+
+  background-image: linear-gradient(to right, var(--black), rgba(0, 0, 0, 0.26) ,rgba(43, 32, 8, 0.5), rgba(117, 85, 15, 0.9));
+
+  main {
+    position: relative;
+    color: var(--white);
+    
+    max-width: 990px;
+    margin: 0 auto;
+
+    transform: translateY(3rem);
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    div {
+      position: absolute;
+      top: 0.5rem;
+      left: 8rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 3.5rem;
+      height: 3.5rem;
+
+      border-radius: 50%;
+
+      background: var(--white);
+
+      span {
+        color: var(--dark-background);
+        display: block;
+        font-size: 4rem;
+        font-weight: 700;
+      }
+    }
+
+    @media(max-width: 800px) {
+      max-width: 95vw;
+    }
+  }
+}
+
+.content {
+  max-width: 990px;
+  margin: 0 auto;
+
+  padding: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  header {
+    padding: 0 2rem;
+
+    
+
+    div {
+      h1 {
+        color: var(--white);
+        font-size: 3rem;
+      }
+  
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+
+    margin-top: 3rem;
+
+    nav {
+      ul {
+        width: 100%;
+        list-style-type: none;
+
+        li {
+          overflow: hidden;
+          
+          border-radius: 5px;
+
+          & + li {
+            margin-top: 6px;
+
+          }
+
+          button {
+            position: relative;
+            height: 3.5rem;
+            width: 100%;
+            border: 0;
+
+            background: var(--drawer-bg);
+
+            color: var(--background);
+            font-size: 1.25rem;
+
+            text-align: left;
+            padding-left: 32px;
+
+            transition: all 0.2s;
+
+            &:hover {
+              filter: brightness(1.5);
+            }
+          }
+
+          .activeButton {
+            &::before {
+              position: absolute;
+              content: '';
+              height: 100%;
+              width: 8px;
+
+              top: 0;
+              left: 0;
+
+              background-color: var(--blue);
+            }
+          }
+        }
+      }
+    }
+
+    @media(max-width: 720px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media(max-width: 800px) {
+    max-width: 95vw;
+  }
+}
+
+.message {
+  width: 100%;
+  height: 8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--grey);
+
+  border-radius: 5px;
+  
+  background: var(--black);
+}

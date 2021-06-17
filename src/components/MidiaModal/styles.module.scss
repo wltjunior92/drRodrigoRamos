@@ -1,0 +1,58 @@
+.midiaModalContainer {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.4);  
+
+  z-index: 200;
+}
+
+.midiasModalContent {
+  position: relative;
+  padding: 0 1rem;
+  padding-bottom: 3rem;
+
+  border-radius: 8px;
+  background: var(--background);
+
+  main {
+    width: 950px;
+    height: 550px;
+    
+    @media(max-width: 1025px) {
+      width: 620px;
+      height: 350px;
+    }
+
+    @media(max-width: 720px) {
+      width: 320px;
+      height: 180px;
+    }
+  }
+
+  header {
+    margin: 0.5rem 0;
+    h1 {
+      font-size: 1.25rem;
+      color: var(--black);
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    border: 0;
+    background: transparent;
+  }
+}

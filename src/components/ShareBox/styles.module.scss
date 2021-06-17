@@ -1,0 +1,130 @@
+.container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-top: 1px solid var(--golden);
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  width: 100%;
+
+  @media(max-width: 720px) {
+    max-width: 95vw;
+  }
+  
+  img {
+    height: 5rem;
+    width: 5rem;
+
+    border-radius: 50%;
+    border: 1px solid var(--golden);
+
+    @media(max-width: 720px) {
+      margin-left: auto;
+    }
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+
+    >div {
+      margin: 0 3rem;
+  
+      h3 {
+        color: var(--text);
+  
+        a {
+          color: var(--description);
+  
+          &:hover {
+            color: var(--subtitle);
+          }
+        }
+      }
+  
+      p {
+        margin-top: 0.5rem;
+        color: var(--grey);
+      }
+      
+      @media(max-width: 720px) {
+        margin: 0 auto;
+        // margin-left: auto;
+      }
+    }
+  }
+
+
+  section {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    main {
+      div {
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0.5rem;
+        border-radius: 50%;
+
+        border: 3px solid white;
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+  
+        svg {
+          color: white;
+          width: 2rem;
+          height: 2rem;
+        }
+  
+        transition: filter 0.2s;
+  
+        &:hover {
+          filter: brightness(0.8);
+        }
+  
+        @media(max-width: 720px) {
+          margin: 0 0.25rem;
+        }
+      }
+    }
+
+    .facebookButton {
+      background: #4267B2;
+    }
+
+    .whatsappButton {
+      background: #25D366;
+    }
+    
+    .twitterButton {
+      background: #1DA1F2;
+    }
+    
+    .linkedinButton {
+      background: #0e76a8;
+    }
+
+    @media(max-width: 801px) {
+      flex-direction: column;
+    }
+
+    @media(max-width: 720px) {
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+  }
+
+  @media(max-width: 801px) {
+    grid-template-columns: 1fr;
+  }
+}
