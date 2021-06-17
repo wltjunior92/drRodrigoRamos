@@ -18,6 +18,7 @@ import { MidiaModal } from '../components/MidiaModal';
 import { getPrismicClient } from '../services/prismic';
 import Link from 'next/link';
 import { OutrasMidiasCard } from '../components/OutrasMidiasCard';
+import { useRouter } from 'next/router';
 
 type BioContent = {
   title: string;
@@ -117,6 +118,8 @@ export default function Home({
   const [isMidiaModalOpen, setIsMidiaModalOpen] = useState(false);
   const [videoData, setvideoData] = useState<VideoDataProps>({ youtubeMediaId: '', videoTitle: '' });
 
+  const router = useRouter();
+
   function closeMidiaModal() {
     setIsMidiaModalOpen(false)
   }
@@ -140,7 +143,7 @@ export default function Home({
               <span>EM PRIMEIRO</span> <br />
               LUGAR
             </p>
-            <button>SAIBA MAIS</button>
+            <button onClick={() => router.push('/profissional')}>SAIBA MAIS</button>
           </div>
           <img src="/images/foto.png" />
         </section>
@@ -155,7 +158,10 @@ export default function Home({
         />
 
         <div>
-          <a href="#">VER TRATAMENTOS</a>
+
+          <Link href="/tratamentos">
+            <a>VER TRATAMENTOS</a>
+          </Link>
           <Link href="/blog">
             <a>VISITE O BLOG DO DR RODRIGO</a>
           </Link>
