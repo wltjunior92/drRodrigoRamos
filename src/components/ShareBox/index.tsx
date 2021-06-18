@@ -12,8 +12,6 @@ interface ShareBoxProps {
 }
 
 export function ShareBox({ children, author, authorLink, postLink, authorAvatar }: ShareBoxProps) {
-  const link = postLink.substr(1);
-
   return (
     <footer className={styles.container}>
       <main>
@@ -30,22 +28,22 @@ export function ShareBox({ children, author, authorLink, postLink, authorAvatar 
       <section>
         <h4>Compartilhe em suas redes sociais</h4>
         <main>
-          <a target="__blank" href={`https://www.facebook.com/sharer/sharer.php?u=${process.env.URL_LINK}${link}`}>
+          <a target="__blank" href={`https://www.facebook.com/sharer/sharer.php?u=${process.env.URL_LINK}${postLink}`}>
             <div className={styles.facebookButton}>
               <FiFacebook />
             </div>
           </a>
-          <a target="__blank" href={`https://api.whatsapp.com/send?text=${process.env.URL_LINK}${link}`}>
+          <a target="__blank" href={`https://api.whatsapp.com/send?text=${process.env.URL_LINK}${postLink}`}>
             <div className={styles.whatsappButton}>
               <FiPhone />
             </div>
           </a>
-          <a target="__blank" href={`https://twitter.com/intent/tweet?url=${process.env.URL_LINK}${link}`}>
+          <a target="__blank" href={`https://twitter.com/intent/tweet?url=${process.env.URL_LINK}${postLink}`}>
             <div className={styles.twitterButton}>
               <FiTwitter />
             </div>
           </a>
-          <a target="__blank" href={`https://www.linkedin.com/shareArticle?mini=true&url=${process.env.URL_LINK}${link}`}>
+          <a target="__blank" href={`https://www.linkedin.com/shareArticle?mini=true&url=${process.env.URL_LINK}${postLink}`}>
             <div className={styles.linkedinButton}>
               <FiLinkedin />
             </div>
