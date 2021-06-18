@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
-import Head from "next/head";
 import { RichText } from "prismic-dom";
 import { FiPhone } from "react-icons/fi";
+import SEO from "../../components/SEO";
 import { getPrismicClient } from "../../services/prismic";
 
 import styles from './styles.module.scss';
@@ -23,9 +23,10 @@ export default function Contato(props: ContatoProps) {
 
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos | Blog</title>
-      </Head>
+      <SEO
+        title="Blog"
+        image="/images/logo.svg"
+      />
 
       <section className={styles.contatoContainer}>
         <main className={styles.contatoContent}>

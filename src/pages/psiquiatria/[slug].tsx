@@ -1,5 +1,4 @@
 import { GetServerSideProps } from "next"
-import Head from 'next/head';
 import { RichText } from "prismic-dom";
 import Prismic from '@prismicio/client';
 
@@ -9,6 +8,7 @@ import styles from '../../styles/pages/textContent.module.scss';
 import Link from "next/link";
 import { ShareBox } from "../../components/ShareBox";
 import { useRouter } from "next/router";
+import SEO from "../../components/SEO";
 
 type content = {
   imageReference: string;
@@ -47,9 +47,10 @@ export default function PsiquiatriaPost({ post, psiquiatriaPosts }: PsiquiatriaP
 
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos | {post.title}</title>
-      </Head>
+      <SEO
+        title={post.title}
+        image="/images/logo.svg"
+      />
 
       {post.banner &&
         <div className={styles.banner} style={{ backgroundImage: `url(${post.banner})` }} />

@@ -6,8 +6,7 @@ import Prismic from '@prismicio/client';
 import { getPrismicClient } from '../../services/prismic';
 
 import styles from './styles.module.scss';
-import { useState } from 'react';
-import Head from 'next/head';
+import SEO from '../../components/SEO';
 
 type Tratamento = {
   id: string;
@@ -26,9 +25,10 @@ interface TratamentosProps {
 export default function Tratamentos({ posts }: TratamentosProps) {
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos | Tratamentos</title>
-      </Head>
+      <SEO
+        title="Tratamentos"
+        image="/images/logo.svg"
+      />
 
       <div className={styles.blogContainer}>
         <main className={styles.blogContent}>

@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
 import Prismic from '@prismicio/client';
 import { RichText } from 'prismic-dom';
 
@@ -8,6 +7,7 @@ import { getPrismicClient } from '../../services/prismic';
 import styles from './styles.module.scss';
 import { useState } from 'react';
 import { FaqItem } from '../../components/FaqItem';
+import SEO from '../../components/SEO';
 
 type Item = {
   id: string;
@@ -31,9 +31,10 @@ export default function Faq({ questions }: FaqProps) {
 
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos | FAQ</title>
-      </Head>
+      <SEO
+        title="FAQ"
+        image="/images/logo.svg"
+      />
 
       <header className={styles.headerContent}>
         <main>

@@ -19,6 +19,7 @@ import { getPrismicClient } from '../services/prismic';
 import Link from 'next/link';
 import { OutrasMidiasCard } from '../components/OutrasMidiasCard';
 import { useRouter } from 'next/router';
+import SEO from '../components/SEO';
 
 type BioContent = {
   title: string;
@@ -131,9 +132,11 @@ export default function Home({
 
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos</title>
-      </Head>
+      <SEO
+        title="Home"
+        image="/images/logo.svg"
+        shouldExcludeTitleSuffix
+      />
 
       <main className={styles.homeContainer}>
         <section className={styles.homeContent}>

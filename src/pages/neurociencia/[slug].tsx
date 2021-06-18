@@ -1,5 +1,4 @@
 import { GetServerSideProps } from "next"
-import Head from 'next/head';
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { RichText } from "prismic-dom";
@@ -9,6 +8,7 @@ import { getPrismicClient } from "../../services/prismic";
 
 import styles from '../../styles/pages/textContent.module.scss';
 import { ShareBox } from "../../components/ShareBox";
+import SEO from "../../components/SEO";
 
 type content = {
   imageReference: string;
@@ -47,9 +47,10 @@ export default function NeurocienciaPost({ post, neurocienciaPosts }: Neurocienc
 
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos | {post.title}</title>
-      </Head>
+      <SEO
+        title={post.title}
+        image="/images/logo.svg"
+      />
 
       {post.banner &&
         <div className={styles.banner} style={{ backgroundImage: `url(${post.banner})` }} />

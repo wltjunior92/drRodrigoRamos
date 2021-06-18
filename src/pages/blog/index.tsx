@@ -7,7 +7,7 @@ import { getPrismicClient } from '../../services/prismic';
 
 import styles from './styles.module.scss';
 import { useState } from 'react';
-import Head from 'next/head';
+import SEO from '../../components/SEO';
 
 type Post = {
   id: string;
@@ -64,9 +64,10 @@ export default function Blog({ posts, next_page }: BlogProps) {
 
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos | Blog</title>
-      </Head>
+      <SEO
+        title="Blog"
+        image="/images/logo.svg"
+      />
 
       <div className={styles.blogContainer}>
         <main className={styles.blogContent}>

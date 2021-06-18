@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
 import { getPrismicClient } from '../../services/prismic';
 
 import styles from '../../styles/pages/contentPages.module.scss';
 import { RichText } from 'prismic-dom';
+import SEO from '../../components/SEO';
 
 type Content = {
   image: string;
@@ -25,9 +25,10 @@ export default function Psicodinamica({ psicodinamicaPage }: PsicodinamicaProps)
 
   return (
     <>
-      <Head>
-        <title>Dr. Rodrigo Ramos | Psiquiatria</title>
-      </Head>
+      <SEO
+        title="Psiquiatria"
+        image="/images/logo.svg"
+      />
 
       <div className={styles.banner} style={{ backgroundImage: `url(${psicodinamicaPage.banner})` }}>
         <section>
