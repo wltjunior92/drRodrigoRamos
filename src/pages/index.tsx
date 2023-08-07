@@ -173,7 +173,6 @@ export default function Home({
 
       <TextCardContent
         titulo="Neurociência"
-        image="/neurociencia-logo.svg"
       >
         {neurocienciaPosts.map(content => (
           <TextContent key={content.id} banner={content.banner}>
@@ -187,7 +186,6 @@ export default function Home({
 
       <TextCardContent
         titulo="Psiquiatria"
-        image="/psiquiatria-logo.svg"
       >
         {psiquiatriaPosts.map(content => (
           <TextContent key={content.id} banner={content.banner}>
@@ -201,7 +199,6 @@ export default function Home({
 
       <TextCardContent
         titulo="Psicodinâmica"
-        image="/psicodinamica-logo.svg"
       >
         {psicodinamicaPosts.map(content => (
           <TextContent key={content.id} banner={content.banner}>
@@ -241,7 +238,6 @@ export default function Home({
 
       <MidiasContent
         titulo="Vídeos"
-        image="/videos-logo.svg"
       >
         {videosPosts.map(video => (
           <MidiasCard
@@ -261,7 +257,6 @@ export default function Home({
 
       <MidiasContent
         titulo="Outras mídias"
-        image="/midias-logo.svg"
       >
         {outrasMidiasPosts.map(midia => (
           <OutrasMidiasCard
@@ -278,7 +273,6 @@ export default function Home({
       </MidiasContent>
 
       <PostsBlogContent
-        image="/blog-logo.svg"
       >
         {blogPosts.map(post => (
           <BlogCards key={post.id}>
